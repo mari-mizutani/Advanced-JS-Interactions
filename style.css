@@ -37,6 +37,75 @@ body{
 .carouselContainer{
     background: royalblue;
     height: 400px;
+    position: relative;
+}
+
+.carousel{
+    position:relative;
+    height:400px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel-slide{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel-slide img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-track{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.carousel-btn{
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.carousel-btn-left{
+    left: -40px;
+    border:none;
+    background: none;
+}
+
+.carousel-btn-right{
+    right: -40px;
+    border:none;
+    background: none;
+}
+
+.carousel-btn img{
+    width: 20px;
+}
+
+.carousel-nav{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel-indicator{
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(0,0,0,0.3);
+    margin: 0 12px;
+}
+
+.carousel-indicator.current-slide{
+    background: rgba(0,0,0,0.6);
 }
 
 .title{
