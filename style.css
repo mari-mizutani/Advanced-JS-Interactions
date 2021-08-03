@@ -34,6 +34,7 @@ body{
     height: 350px;
 }
 
+/*----- carousel css -----*/
 .carouselContainer{
     background: royalblue;
     height: 400px;
@@ -107,6 +108,9 @@ body{
 .carousel-indicator.current-slide{
     background: rgba(0,0,0,0.6);
 }
+
+/*----- carousel css end -----*/
+
 
 .title{
     font-size: 1.5em;
