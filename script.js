@@ -10,32 +10,35 @@ function randomLetter(){
 //----- switch screen mode -----
 const screenMode=document.querySelector(".mode");
 
-screenMode.addEventListener("click",function(){
+screenMode.addEventListener("click",()=>{
     document.querySelector('body').classList.toggle('darkMode');
 });
 
 //----- parallax carousel -----
-const track = document.querySelector(".carousel-track");
-const slides = Array.from(track.children);
-const slideSize = slides[0].getBoundingClientRect();//Returns the size of a slide and its position relative to the viewport
+let slideImages=[
+        "img/carousel1.jpeg",
+        "img/carousel2.jpeg",
+        "img/carousel3.jpeg"
+];
 
-//set each images to the next
-// slides[0].style.left =0;
-// slides[1].style.left =slideSize.width + "px";
-// slides[2].style.left =slideSize.width*2 + "px";
-slides.forEach((slide,index)=>{
-    slide.style.left=(slideSize.width)*index+"px";
-})
+const imageDiv = document.querySelector(".slide-img");
 
 //click and move to the left
 const toLeft=document.querySelector(".carousel-btn-left");
-toLeft.addEventListener("click",function(){
-    
+
+toLeft.addEventListener("click",()=>{
+    imageDiv.src=slideImages[2]
 });
 
 //click and move to the right
 const toRight=document.querySelector(".carousel-btn-right");
+toRight.addEventListener("click",()=>{
+
+    imageDiv.src=slideImages[1]
+
+});
+
 
 //click indicator to move to the picture
-const indicatorNav=document.querySelector(".carousel-nav");
-const indicatorBtn = Array.from(indicatorNav.children);
+// const indicatorNav=document.querySelector(".carousel-nav");
+// const indicatorBtn = Array.from(indicatorNav.children);

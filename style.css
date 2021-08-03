@@ -34,7 +34,7 @@ body{
     height: 350px;
 }
 
-/*----- carousel css -----*/
+/*----- carousel css from here -----*/
 .carouselContainer{
     background: royalblue;
     height: 400px;
@@ -61,33 +61,28 @@ body{
     object-fit: cover;
 }
 
-.carousel-track{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
 .carousel-btn{
     position: absolute;
     top: 60%;
-    transform: translateY(-50%);
     cursor: pointer;
 }
 
 .carousel-btn-left{
-    left: -40px;
+    left: 20px;
     border:none;
     background: none;
+    z-index: 1;
 }
 
 .carousel-btn-right{
-    right: -40px;
+    right: 20px;
     border:none;
     background: none;
+    z-index: 1;
 }
 
 .carousel-btn img{
-    width: 20px;
+    width: 30px;
 }
 
 .carousel-nav{
@@ -109,7 +104,7 @@ body{
     background: rgba(0,0,0,0.6);
 }
 
-/*----- carousel css end -----*/
+/*----- carousel css till here -----*/
 
 
 .title{
