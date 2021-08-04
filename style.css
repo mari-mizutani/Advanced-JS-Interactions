@@ -36,11 +36,24 @@ body{
 
 /*----- carousel css from here -----*/
 .carouselContainer{
-    background: royalblue;
+    background: black;
     height: 400px;
     position: relative;
 }
 
+.carousel h2{
+    position: absolute;
+    top: 60%;
+    left:45%;
+    color: white;
+    z-index: 1;
+}
+@media screen and (max-width: 997px) {
+.carousel h2{
+    top: 60%;
+    left:40%;
+}
+}
 .carousel{
     position:relative;
     height:400px;
@@ -59,6 +72,7 @@ body{
     width:100%;
     height: 100%;
     object-fit: cover;
+    filter: opacity(0.8);
 }
 
 .carousel-btn{
@@ -85,7 +99,7 @@ body{
     width: 30px;
 }
 
-.carousel-nav{
+/* .carousel-nav{
     display: flex;
     justify-content: center;
     padding: 10px 0;
@@ -102,7 +116,7 @@ body{
 
 .carousel-indicator.current-slide{
     background: rgba(0,0,0,0.6);
-}
+} */
 
 /*----- carousel css till here -----*/
 

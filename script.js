@@ -21,21 +21,40 @@ let slideImages=[
         "img/carousel3.jpeg"
 ];
 
-const imageDiv = document.querySelector(".slide-img");
+const imageDiv = document.querySelector(".carousel-slide");
+
+var currentpic = 0;
+var lastpic = slideImages.length-1;
 
 //click and move to the left
 const toLeft=document.querySelector(".carousel-btn-left");
 
 toLeft.addEventListener("click",()=>{
-    imageDiv.src=slideImages[2]
+    if (currentpic == lastpic)
+    {
+        currentpic = 0;
+        document.querySelector('.slide-img').src = slideImages[currentpic];
+    }
+    else
+    {
+        currentpic--;
+        document.querySelector('.slide-img').src = slideImages[currentpic];
+    }
 });
 
 //click and move to the right
 const toRight=document.querySelector(".carousel-btn-right");
 toRight.addEventListener("click",()=>{
-
-    imageDiv.src=slideImages[1]
-
+    if (currentpic == lastpic)
+    {
+        currentpic = 0;
+        document.querySelector('.slide-img').src = slideImages[currentpic];
+    }
+    else
+    {
+        currentpic++;
+        document.querySelector('.slide-img').src = slideImages[currentpic];
+    }
 });
 
 
