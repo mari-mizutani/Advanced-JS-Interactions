@@ -7,14 +7,14 @@ function randomLetter(){
     return alphabet[Math.floor(Math.random() * alphabet.length)]
 }
 
-//----- switch screen mode -----
+//==================== switch screen mode ====================
 const screenMode=document.querySelector(".mode");
 
 screenMode.addEventListener("click",()=>{
     document.querySelector('body').classList.toggle('darkMode');
 });
 
-//----- parallax carousel -----
+//==================== parallax carousel ====================
 let slideImages=[
         "img/carousel1.jpeg",
         "img/carousel2.jpeg",
@@ -22,10 +22,10 @@ let slideImages=[
 ];
 
 const image = document.querySelector('.slide-img');
-
+let i=0;
+let lastpic = slideImages.length-1;
 
 //auto change
-let i=0;
 function changeImg(){
     image.src = slideImages[i];
     if(i<slideImages.length - 1){
@@ -35,42 +35,44 @@ function changeImg(){
     }
     setTimeout("changeImg()",3000);
 }
-
 window.onload=changeImg;
 
-
-let currentpic = 0;
-let lastpic = slideImages.length-1;
 
 //click and move to the left
 const toLeft=document.querySelector(".carousel-btn-left");
 
 toLeft.addEventListener("click",()=>{
-    if (currentpic == 0)
+    if (i == 0)
     {
-        currentpic = 2;
-        image.src = slideImages[currentpic];
+        i = lastpic;
+        image.src = slideImages[i];
     }
     else
     {
-        currentpic--;
-        image.src = slideImages[currentpic];
+        i--;
+        image.src = slideImages[i];
     };
-
 });
 
 //click and move to the right
 const toRight=document.querySelector(".carousel-btn-right");
 
 toRight.addEventListener("click",()=>{
-    if (currentpic == lastpic)
+    if (i == lastpic)
     {
-        currentpic = 0;
-        image.src = slideImages[currentpic];
+        i = 0;
+        image.src = slideImages[i];
     }
     else
     {
-        currentpic++;
-        image.src = slideImages[currentpic];
+        i++;
+        image.src = slideImages[i];
     }
+});
+
+
+//==================== collage ====================
+const collageImage = document.querySelector('.image');
+
+collageImage.addEventListener("click",()=>{
 });

@@ -9,6 +9,9 @@ body{
 .image{
     height: 250px;
     background: midnightblue;
+    background-image: url('img/cat.jpeg');
+    background-position: center;
+    cursor: pointer;
 }
 
 .poke{
@@ -140,3 +143,4 @@ body{
 .mode:hover{
     cursor: pointer;
 }
+
