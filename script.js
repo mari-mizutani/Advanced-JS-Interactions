@@ -21,7 +21,23 @@ let slideImages=[
         "img/carousel3.jpeg"
 ];
 
-const imageDiv = document.querySelector(".carousel-slide");
+const image = document.querySelector('.slide-img');
+
+
+//auto change
+let i=0;
+function changeImg(){
+    image.src = slideImages[i];
+    if(i<slideImages.length - 1){
+        i++;
+    }else{
+        i=0;
+    }
+    setTimeout("changeImg()",3000);
+}
+
+window.onload=changeImg;
+
 
 let currentpic = 0;
 let lastpic = slideImages.length-1;
@@ -33,31 +49,28 @@ toLeft.addEventListener("click",()=>{
     if (currentpic == 0)
     {
         currentpic = 2;
-        document.querySelector('.slide-img').src = slideImages[currentpic];
+        image.src = slideImages[currentpic];
     }
     else
     {
         currentpic--;
-        document.querySelector('.slide-img').src = slideImages[currentpic];
-    }
+        image.src = slideImages[currentpic];
+    };
+
 });
 
 //click and move to the right
 const toRight=document.querySelector(".carousel-btn-right");
+
 toRight.addEventListener("click",()=>{
     if (currentpic == lastpic)
     {
         currentpic = 0;
-        document.querySelector('.slide-img').src = slideImages[currentpic];
+        image.src = slideImages[currentpic];
     }
     else
     {
         currentpic++;
-        document.querySelector('.slide-img').src = slideImages[currentpic];
+        image.src = slideImages[currentpic];
     }
 });
-
-
-//click indicator to move to the picture
-// const indicatorNav=document.querySelector(".carousel-nav");
-// const indicatorBtn = Array.from(indicatorNav.children);
