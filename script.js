@@ -80,6 +80,16 @@ const collageImage = document.querySelectorAll('.image');
 
 for (let i = 0; i < collageImage.length; i++) {
 collageImage[i].addEventListener("click",() => {
-
+    lightboxBg.classList.add('active'); //turns background dark
+    const lightboxImg = document.createElement('img');
+    lightboxImg.src="img/cat.jpeg";
+    while(lightboxBg.firstChild){
+        lightboxBg.removeChild(lightboxBg.firstChild);//remove the img made by previous click
+    }
+    lightboxBg.appendChild(lightboxImg); //set the bigger image on the dark screen
 })
 };
+
+lightboxBg.addEventListener("click",()=>{
+    lightboxBg.classList.remove('active');//click somewhere else and back to normal screen
+})
