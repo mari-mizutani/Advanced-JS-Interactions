@@ -72,7 +72,14 @@ toRight.addEventListener("click",()=>{
 
 
 //==================== collage ====================
-const collageImage = document.querySelector('.image');
+const lightboxBg = document.createElement('div');
+lightboxBg.id="lightboxBg";
+document.body.appendChild(lightboxBg);
 
-collageImage.addEventListener("click",()=>{
-});
+const collageImage = document.querySelectorAll('.image');
+
+for (let i = 0; i < collageImage.length; i++) {
+collageImage[i].addEventListener("click",() => {
+
+})
+};
