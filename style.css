@@ -30,7 +30,19 @@ body{
     place-items:center;
 }
 
+#lightboxBg p{
+    color: white;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 997px) {
+#lightboxBg img{
+ width: 80%;
+}
+}
 /*----- collage css till here -----*/
+
+
 .poke{
     font-weight: bold;
 }

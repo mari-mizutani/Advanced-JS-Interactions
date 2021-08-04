@@ -82,11 +82,14 @@ for (let i = 0; i < collageImage.length; i++) {
 collageImage[i].addEventListener("click",() => {
     lightboxBg.classList.add('active'); //turns background dark
     const lightboxImg = document.createElement('img');
+    const lightboxText =  document.createElement('p');
     lightboxImg.src="img/cat.jpeg";
+    lightboxText.innerHTML="Oh, hi. I'm a cute cat."
     while(lightboxBg.firstChild){
         lightboxBg.removeChild(lightboxBg.firstChild);//remove the img made by previous click
     }
     lightboxBg.appendChild(lightboxImg); //set the bigger image on the dark screen
+    lightboxBg.appendChild(lightboxText);
 })
 };
 
