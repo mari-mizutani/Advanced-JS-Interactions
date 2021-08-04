@@ -23,16 +23,16 @@ let slideImages=[
 
 const imageDiv = document.querySelector(".carousel-slide");
 
-var currentpic = 0;
-var lastpic = slideImages.length-1;
+let currentpic = 0;
+let lastpic = slideImages.length-1;
 
 //click and move to the left
 const toLeft=document.querySelector(".carousel-btn-left");
 
 toLeft.addEventListener("click",()=>{
-    if (currentpic == lastpic)
+    if (currentpic == 0)
     {
-        currentpic = 0;
+        currentpic = 2;
         document.querySelector('.slide-img').src = slideImages[currentpic];
     }
     else
